@@ -73,9 +73,8 @@ class Clients extends Model
      */
     public $timestamps = true;
 
-    // Scopes...
-
-    // Functions ...
-
-    // Relations ...
+    public function users()
+    {
+        return $this->hasMany('App\Models\Users', 'client_id', 'id');
+    }
 }

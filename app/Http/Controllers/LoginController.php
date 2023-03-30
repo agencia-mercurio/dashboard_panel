@@ -51,8 +51,8 @@ class LoginController extends Controller
                 'id' => $user->id,
                 'name' => $user->name,
                 'client_id' => $user->client_id,
+                'permissions' => $user->permissions,
             ],
-            'client_id'=> $user->client_id,
             'access_token' => $token,
             'token_type' => 'Bearer',
             'expires_in' => auth('services')->factory()->getTTL() * 60

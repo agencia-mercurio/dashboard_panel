@@ -26,6 +26,7 @@ class WebsiteTextsController extends Controller
             }
             
             $results[] = array(
+                'label' => $values[0]->label,
                 'key' => $key,
                 'value' => $formattedValues
             );
@@ -37,6 +38,7 @@ class WebsiteTextsController extends Controller
     {
 
         $values = WebsiteTexts::where('key', $key)->get();
+        $label = $values[0]->label;
         
         $formattedValues = array();
         
@@ -45,6 +47,7 @@ class WebsiteTextsController extends Controller
         }
         
         return response()->json([
+            'label' => $label,
             'key' => $key,
             'value' => $formattedValues
         ]);
@@ -67,43 +70,28 @@ class WebsiteTextsController extends Controller
 
     public function update(Request $request)
     {
-        $imagePath = "texts/" . Auth::user()->client_id;
         $startTime = microtime(true);
     
-        $data = $request->all();
-    
-        $mobile = $request->file('mobile');
-        $desktop = $request->file('desktop');
-    
-        $websiteImage = WebsiteImages::find($data['id']);
+        $data = $request->json()->all();
+        $languages = $data['values'];
+        $key = $data['key'];
+        $label = $data['label'];
 
-        $oldMobile = $websiteImage->mobile;
-        $oldDesktop = $websiteImage->desktop;
-    
-        // Delete the old images
-        if(file_exists(storage_path('app/public/'.$oldMobile))) {
-            unlink(storage_path('app/public/'.$oldMobile));
+        foreach ($languages as $language => $value) {
+            $websiteText = WebsiteTexts::where('key', $key)->where('language', $language)->first();
+            $websiteText->value = $value;
+            $websiteText->save();
         }
-        if(file_exists(storage_path('app/public/'.$oldDesktop))) {
-            unlink(storage_path('app/public/'.$oldDesktop));
-        }
-
-        $mobile = $mobile->store($imagePath, 'public');
-        $desktop = $desktop->store($imagePath, 'public');
-
-    
-        // Update the image data in the database
-        $websiteImage->update([
-            'mobile' => $mobile,
-            'desktop' => $desktop,
-            'alt' => $data['alt'],
-        ]);
     
         $duration = microtime(true) - $startTime;
     
-        $this->log('update', 'Updated image #'.$websiteImage->id, $duration);
+        $this->log('update', 'Updated Text #'.$key, $duration);
     
-        return response()->json($websiteImage);
+        return response()->json([
+            'label' => $label,
+            'key' => $key,
+            'values' => $data['values']
+        ]);
     }
 
     protected function log($action, $description, $duration)

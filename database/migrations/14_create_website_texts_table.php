@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('client_id');
             $table->string('key');
+            $table->string('label');
             $table->longText('value');
             $table->string('language');
             $table->integer('active');

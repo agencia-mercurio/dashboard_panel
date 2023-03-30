@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\WebsiteImagesController;
 use App\Http\Controllers\WebsiteTextsController;
+use App\Http\Controllers\EmailController;
 
 
 Route::post('/login', [LoginController::class, 'login']);
@@ -27,5 +28,7 @@ Route::group(['middleware' => ['auth:services','jwt']], function(){
     Route::get('/website-texts/{key}', [WebsiteTextsController::class, 'get']);
     Route::post('/website-texts/create', [WebsiteTextsController::class, 'create']);
     Route::post('/website-texts/update', [WebsiteTextsController::class, 'update']);
+
+    Route::post('/email/send', [EmailController::class, 'send']);
     
 });

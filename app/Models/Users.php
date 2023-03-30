@@ -88,9 +88,13 @@ class Users extends Authenticatable implements JWTSubject
         return [];
     }
 
-    // Scopes...
+    public function client()
+    {
+        return $this->belongsTo('App\Models\Clients', 'client_id');
+    }
 
-    // Functions ...
-
-    // Relations ...
+    public function permissions()
+    {
+        return $this->belongsTo('App\Models\Permissions');
+    }
 }
