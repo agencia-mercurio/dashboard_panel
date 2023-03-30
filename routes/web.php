@@ -7,7 +7,6 @@ use App\Http\Controllers\WebsiteImagesController;
 use App\Http\Controllers\WebsiteTextsController;
 use App\Http\Controllers\EmailController;
 
-
 Route::post('/login', [LoginController::class, 'login']);
 
 Route::group(['middleware' => ['auth:services','jwt']], function(){
