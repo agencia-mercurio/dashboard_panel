@@ -14,7 +14,7 @@ class LiberactionSeeder extends Seeder
     public function run(): void
     {
         foreach(['pt', 'en'] as $language) {
-            $json = file_get_contents('C:\Users\leona\OneDrive\Área de Trabalho\Agência Mercúrio\dashboard_panel\jsons\liberaction\texts.'. $language .'.json');
+            $json = file_get_contents('jsons\liberaction\texts.'. $language .'.json');
 
             $object = json_decode($json);
             
