@@ -1,0 +1,120 @@
+{
+    "footer": {
+      "copyright": "Todos os direitos reservados."
+    },
+    "navbar": {
+      "tax": "Imposto",
+      "finantial": "Investimentos",
+      "legal": "Offshore",
+      "about": "Quem somos nós",
+      "contact": "Contato"
+    },
+    "routes": {
+      "home": "/pt",
+      "tax_services": "/pt/solucoes-fiscais",
+      "finantial_services": "/pt/solucoes-financeiras",
+      "legal_services": "/pt/estruturas-offshore"
+    },
+    "initial": {
+      "title": "Liberdade especializada em criptoativos",
+      "know_our_services": "Conheça nossos serviços"
+    },
+    "differential": {
+      "our_differential": "Qual o nosso diferencial?",
+      "text": "<p>Liberaction atua no mercado da&nbsp;<b>cripto-economia</b>, trazendo <b>liberdade </b>e <b>prote&ccedil;&atilde;o</b> atrav&eacute;s de solu&ccedil;&otilde;es exclusivas para o seu perfil e seus investimentos, que s&oacute; podem ser proporcionadas por meio dessa nova tecnologia.</p>\n<p>O departamento fiscal analisa cada opera&ccedil;&atilde;o realizada pelo contribuinte, declarando o m&iacute;nimo exig&iacute;vel por lei e <b>diminuindo sua carga tribut&aacute;ria</b> ao m&aacute;ximo, atrav&eacute;s de estrat&eacute;gias de&nbsp;elis&atilde;o fiscal&nbsp;e internacionaliza&ccedil;&atilde;o.</p>\n<p>O setor financeiro &eacute; constitu&iacute;do por especialistas na &aacute;rea de&nbsp;<b>DEFI</b>,&nbsp;que trazem para voc&ecirc; as melhores oportunidades de investimentos em criptoativos por meios descentralizados.</p>\n<p>Enquanto nosso departamento legal, estabelecido em&nbsp;pa&iacute;ses com jurisdi&ccedil;&otilde;es mais favor&aacute;veis para investidores no mercado cripto, utiliza a abertura e gest&atilde;o de estruturas que permitem <b>proteger seus ativos</b>, como offshore e smart contract.</p>\n<p>Lembrando que a ampla atua&ccedil;&atilde;o no mercado, faz com que possamos proporcionar pre&ccedil;os bastante atrativos comparado aos praticados atualmente no Brasil, sem deixar de oferecer, como sempre, um <b>servi&ccedil;o de excel&ecirc;</b><b>ncia!</b></p>"
+    },
+    "services": {
+      "discover_our_services": "Conheça as nossas soluções",
+      "tax_services_header": "Declarações Fiscais",
+      "tax_services_title": "Esteja um passo à frente!",
+      "tax_services_text": "<p>Nossa especialidade são as declarações fiscais de criptoativos de maneira segura e otimizada. Encontrando as melhores estratégias de elisão fiscal, para <b>diminuir a sua carga tributária</b>.</p>",
+      "finantial_services_header": "Estruturas Offshore",
+      "finantial_services_title": "Proteja seu patrimônio!",
+      "finantial_services_text": "<p>Opere com <b>segurança e privacidade</b> se beneficiando de todas as vantagens que os países crypto-friendly tem a oferecer.</p>",
+      "legal_services_header": "Oportunidades de Investimento",
+      "legal_services_title": "A chave para sua liberdade!",
+      "legal_services_text": "<p>Aprenda a <b>lucrar</b> com protocolos, diversificar sua carteira e atuar de forma pratica no mundo das <b>finanças descentralizadas</b>.</p>",
+      "more": "Saiba Mais"
+    },
+    "about": {
+      "title": "Quem vai te acompanhar?",
+      "text": " <p>Jurista, formada em direito pela Universidade Aut&ocirc;noma de Lisboa, p&oacute;s-graduanda em economia da escola austr&iacute;aca pelo Instituto Mises e investidora, ir&aacute; te acompanhar durante todo o processo!</p>\n        <p>Al&eacute;m de anos de experi&ecirc;ncia com investimentos em&nbsp;criptoativos, tem diversas forma&ccedil;&otilde;es em cursos como&nbsp;DeFi, An&aacute;lises T&eacute;cnicas, Revolu&ccedil;&atilde;o Monet&aacute;ria do Bitcoin, Ethereum, entre outros, formada pelo&nbsp;Ivan on Tech Academy.</p>\n        <p>Ap&oacute;s o curso de declara&ccedil;&atilde;o fiscal de ativos digitais nos EUA realizado em 2022, Vict&oacute;ria se dedica em estudar quais&nbsp;os <b>melhores pa&iacute;ses</b> para investidores em cripto, para oferecer alternativas de como&nbsp;melhor proteger o seu patrim&ocirc;nio.</p>"
+    },
+    "contact": {
+      "contact_us": "Entre em contato",
+      "how_can_i_help_you": "Conte mais sobre o que procura",
+      "first_name": "Primeiro Nome",
+      "phone": "Telefone",
+      "email": "E-mail",
+      "send": "Falar com um especialista",
+      "sending": "Enviando formulário",
+      "sended": "Formúlario enviado",
+      "tax_services": "Serviços Fiscais",
+      "financial_services": "Serviços Financeiros",
+      "legal_services": "Serviços Legais",
+      "fill_all_inputs_required": "Preencha todos os campos obrigatórios!"
+    },
+    "finantial": {
+      "title": "Oportunidades Financeiras",
+      "contact_us": "Entre em contato",
+      "coverTitle": "DEFI DÁ O PODER E O CONTROLE PARA ATINGIR SEUS GANHOS!",
+      "subtitle": "“O rico investe seu dinheiro e gasta o que sobra;\n                    o pobre gasta seu dinheiro e investe o que sobra”<br />\n                    <b>Jim Rohn</b>",
+      "text": " <p><span style=\"font-weight: 400;\">As finan&ccedil;as descentralizadas &eacute; o futuro que j&aacute; esta presente em milhares de empresas, que hoje atuam com as novas ferramentas proporcionadas pela cripto-economia. &Eacute; poss&iacute;vel utilizar a volatilidade a seu favor e obter uma rentabilidade que s&oacute; um mercado em crescimento acentuado pode oferecer!</span></p>\n                <p><span style=\"font-weight: 400;\">Com a </span><b>mentoria</b><span style=\"font-weight: 400;\">, nossos especialistas em&nbsp;finan&ccedil;as descentralizada, com anos de experi&ecirc;ncia em gest&atilde;o de criptoativos, v&atilde;o te ajudar a&nbsp;diversificar sua carteira de investimentos&nbsp;e atuar de forma pratica com trades, piscinas de liquidez, farming, staking e muitas outras op&ccedil;&otilde;es de rentabilidade no mundo descentralizado.</span></p>\n                <p><span style=\"font-weight: 400;\">Apesar de indicarmos a custodia pr&oacute;pria, sabemos que nem todos tem essa disponibilidade e por isso em casos excepcionais oferecemos um servi&ccedil;o de </span><b>gest&atilde;o de carteira</b><span style=\"font-weight: 400;\">, que consiste em todas as a&ccedil;&otilde;es desde cria&ccedil;&atilde;o de portf&oacute;lio, gest&atilde;o dos ativos, acompanhamento de fundos e investimento nos setores que v&atilde;o de encontro com o seu perfil.</span></p>"
+    },
+    "legal": {
+      "title": "Proteção Patrimonial",
+      "contact_us": "Entre em contato",
+      "coverTitle": "Proteja <b>seu patrimônio</b> de maneira inteligente.",
+      "subtitle": "Sua liberdade só será alcançada quando seu patrimônio estiver seguro.",
+      "text": " <p>A Liberaction tem parceria com escrit&oacute;rios de advogados nos <b>melhores pa&iacute;ses</b> para o investidor cripto. Pa&iacute;ses crypto-friendly com menos burocracia onde voc&ecirc; pode operar de forma segura e privada, facilitando ou extinguindo a necessidade de declara&ccedil;&atilde;o fiscal decriptoativos e <b>blindando</b> o seu patrim&ocirc;nio contra impostos abusivos.</p><p>Vamos juntos entender qual a melhor forma de proteger o seu patrim&ocirc;nio, analisando solu&ccedil;&otilde;es como estruturas offshore que apresentam <b>vantagens tributarias</b> e uma maior prote&ccedil;&atilde;o, reencaminhando a sua decis&atilde;o para um escrit&oacute;rio licenciado no pa&iacute;s escolhido.</p>\n                <p>Nesse pa&iacute;s e atrav&eacute;s de uma procura&ccedil;&atilde;o de poderes de representa&ccedil;&atilde;o, ter&aacute; um time de advogados tratando de tudo, desde: tradu&ccedil;&otilde;es, certifica&ccedil;&otilde;es, conta banc&aacute;ria, registros e tudo que possa necessitar durante todo o processo, tudo incluso em um <b>&uacute;nico servi&ccedil;o</b>.</p>",
+      "summary": {
+        "1": [
+          "Smart Contracts",
+          "Contratos digitais<br />autoexecutáveis"
+        ],
+        "2": [
+          "Trust",
+          "Estrutura de planejamento<br />patrimonial"
+        ],
+        "3": [
+          "IBC",
+          "Empresa de Negócios<br />Internacionais"
+        ],
+        "4": [
+          "LLC",
+          "Sociedade de Responsabilidade<br />Limitada"
+        ],
+        "5": [
+          "PIF",
+          "Fundos de Interesses<br />Privados"
+        ]
+      }
+    },
+    "tax": {
+      "title": "Soluções Fiscais",
+      "contact_us": "Entre em contato",
+      "subtitle": "Pague menos impostos com uma boa estratégia contábil de planejamento tributário.        ",
+      "summary": {
+        "1": "Orientação Legal",
+        "2": "Planejamento Tributário",
+        "3": "Regularização Única"
+      },
+      "coverTitle": "Esteja sempre um passo à frente...",
+      "text": " <p><span style=\"font-weight: 400;\">Contratando um contador tradicional, o mais prov&aacute;vel &eacute; que ele declare todos os seus rendimentos de criptomoedas, como ganho de capital, te deixando exposto a uma enorme carga tributaria e nem sempre devida.</span></p>\n                <p><span style=\"font-weight: 400;\">Na Liberaction, temos um departamento fiscal especializado em declarar criptoativos de forma a que voc&ecirc; </span><b>pague o&nbsp;m&iacute;nimo de imposto </b><span style=\"font-weight: 400;\">legalmente poss&iacute;vel&nbsp;tanto no imposto de renda, como nas obriga&ccedil;&otilde;es mensais.</span></p>\n                <p><span style=\"font-weight: 400;\">Ou seja vamos analisar seus hist&oacute;ricos de transa&ccedil;&otilde;es, qualificando as opera&ccedil;&otilde;es de forma a&nbsp;</span><b>declarar apenas o obrigat&oacute;rio</b><span style=\"font-weight: 400;\">&nbsp;e nos escal&otilde;es fiscais permitidos, mais favor&aacute;veis para voc&ecirc;.</span></p>\n                <p><span style=\"font-weight: 400;\">Nosso objetivo &eacute; fazer com que voc&ecirc; como contribuinte, cumpra com todas as obriga&ccedil;&otilde;es tribut&aacute;rias sem preocupa&ccedil;&otilde;es, mas sempre protegido de impostos abusivos e garantindo sua </span><b>privacidade</b><span style=\"font-weight: 400;\">.</span></p>",
+      "more": "Saiba Mais",
+      "orientation": {
+        "title": "Orientação Legal",
+        "text": "<p><span style=\"font-weight: 400;\">Reuni&atilde;o&nbsp;com um representante do departamento fiscal,&nbsp;</span><b>sem limite de tempo</b><span style=\"font-weight: 400;\">, com o objetivo de:</span></p>\n            <ul>\n                <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Sanar todas as suas d&uacute;vidas;</span></li>\n                <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Sugest&otilde;es de estrat&eacute;gias aplic&aacute;veis a voc&ecirc;;</span></li>\n                <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Orienta&ccedil;&atilde;o de como realizar suas declara&ccedil;&otilde;es;</span></li>\n                <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Explica&ccedil;&atilde;o da tributa&ccedil;&atilde;o de criptos no seu pa&iacute;s.</span></li>\n            </ul>"
+      },
+      "planing": {
+        "title": "Planejamento Tributário",
+        "text": "<p><b>Basta entregar os hist&oacute;ricos todo m&ecirc;s e pronto!</b></p>\n            <p><span style=\"font-weight: 400;\">Ira pagar o m&iacute;nimo de imposto e zero gastos com multas.</span></p>\n            <ul>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Reuni&atilde;o personalizada;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Analise do hist&oacute;rico de transa&ccedil;&otilde;es;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Categorizar todas as opera&ccedil;&otilde;es;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Elaborar o controle de estoque;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Planejamento tribut&aacute;rio exclusivo;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">C&aacute;lculo dos impostos devidos;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Elabora&ccedil;&atilde;o mensal de IN1888;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Elabora&ccedil;&atilde;o mensal do GCAP;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Elabora&ccedil;&atilde;o da declara&ccedil;&atilde;o do IRPF;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Contato ilimitado conosco durante o processo.</span></li>\n            </ul>"
+      },
+      "regularization": {
+        "title": "Regularização Única",
+        "text": "<p><b>Declara&ccedil;&atilde;o retroativa </b><span style=\"font-weight: 400;\">de todos os anos necess&aacute;rios at&eacute; o atual.</span></p>\n            <ul>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Reuni&atilde;o de triagem;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Analise dos hist&oacute;ricos de opera&ccedil;&otilde;es;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Elabora&ccedil;&atilde;o &uacute;nica da IN1888, meses necess&aacute;rios;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Elabora&ccedil;&atilde;o &uacute;nica do GCAP, meses necess&aacute;rios;</span></li>\n            <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Elabora&ccedil;&atilde;o &uacute;nica do IRPF, anos necess&aacute;rios;</span></li>\n            </ul>\n            <p><span style=\"font-weight: 400;\">(Contribuinte sujeito &agrave; multas de atraso).</span></p>"
+      }
+    },
+    "templateMail": "<!DOCTYPE html>\n    <html lang=\"pt-br\">\n\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap\" rel=\"stylesheet\">\n        <title>E-mail de Contato</title>\n    </head>\n\n    <body>\n        <div class=\"wrapper\">\n            <h2>Olá!</h2>\n            <p>Você recebeu uma nova mensagem de contato:</p>\n            <ul>\n                <li><strong>Primeiro Nome:</strong> {{name}}</li>\n                <li><strong>Telefone:</strong> {{phone}}</li>\n                <li><strong>E-mail:</strong> {{email}}</li>\n            </ul>\n            <p><strong>Mensagem:</strong></p>\n            <p>{{message}}</p>\n        </div>\n        <div class=\"footer\">\n            <img src=\"https://mercurio.marketing/general/icon.png\" />\n            <div>{{now}}</div>\n        </div>\n    </body>\n    <style>\n        * {\n            font-family: 'Inter', sans-serif;\n        }\n        h2 {\n            margin: 0;\n        }\n        body {\n            background: #f5f5f5;\n        }\n        .wrapper {\n            background: #fff;\n            padding: 1.5rem;\n            margin: 1rem 2rem 2rem 2rem;\n            border-radius: 10px;\n            box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);\n        }\n        .footer {\n            display: grid;\n            margin-top: 1rem;\n            row-gap: 1rem;\n            justify-content: center;\n        }\n        .footer div {\n            font-size: 10px;\n            color: rgba(0, 0, 0, .6);\n            text-transform: uppercase;\n            text-align: center;\n        }\n    </style>\n\n    </html>",
+    "talkWithUs": "Fale Conosco"
+  }

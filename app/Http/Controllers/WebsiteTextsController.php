@@ -17,7 +17,10 @@ class WebsiteTextsController extends Controller
         $results = array();
 
         foreach ($keys as $key) {
-            $values = WebsiteTexts::where('key', $key)->get();
+            $values = WebsiteTexts::where([
+                ['key', $key],
+                ['active', 1]
+            ])->get();
             
             $formattedValues = array();
             

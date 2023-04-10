@@ -1,0 +1,120 @@
+{
+  "footer": {
+    "copyright": "ALL RIGHTS RESERVED."
+  },
+  "navbar": {
+    "tax": "Tax",
+    "finantial": "Finantial",
+    "legal": "Offshore",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "routes": {
+    "home": "/en",
+    "tax_services": "/en/tax-solutions",
+    "finantial_services": "/en/finantial-solutions",
+    "legal_services": "/en/offshore-structures"
+  },
+  "initial": {
+    "title": "Liberty specializing in crypto assets",
+    "know_our_services": "Discover our services"
+  },
+  "differential": {
+    "our_differential": "What is our differential?",
+    "text": " <p>Liberaction operates in the <b>crypto-economy</b> market, bringing <b>freedom</b> and<b> protection</b> through unique solutions tailored to your profile and investments, which can only be provided through this new technology.</p>\n        <p>Our tax department analyzes each operation carried out by the taxpayer, declaring the minimum required by law and <b>minimizing</b> <b>their tax burden</b> to the maximum, through tax avoidance strategies and internationalization.</p>\n        <p>The financial sector is made up of experts in the DEFI field, who bring you the best investment opportunities in decentralized crypto assets.</p>\n        <p>Meanwhile, our legal department, established in countries with more favorable jurisdictions for crypto investors, uses the opening and management of structures that allow you to <b>protect your assets</b>, such as offshore and smart contracts.</p>\n        <p>It is important to note that our extensive presence in the market allows us to offer very attractive prices compared to those currently practiced in Brazil, while still providing <b>excellent service</b> as always!</p>\n        "
+  },
+  "services": {
+    "discover_our_services": "Discover our solutions",
+    "tax_services_header": "Tax Services",
+    "tax_services_title": "Be one step ahead!",
+    "tax_services_text": "<p>Our specialty is secure and optimized tax reporting of crypto assets. We find the best tax avoidance strategies to <b>reduce your tax burden</b>.</p>",
+    "finantial_services_header": "Offshore Structures",
+    "finantial_services_title": "Protect your assets",
+    "finantial_services_text": "<p>Trade with <b>safety and privacy</b> and enjoy all the advantages that crypto-friendly countries have to offer.</p>",
+    "legal_services_header": "Investment Opportunities",
+    "legal_services_title": "The key to your freedom!",
+    "legal_services_text": "<p>Learn how to <b>profit</b> from protocols, diversify your portfolio, and operate effectively in the world of <b>decentralized finance</b>.</p>",
+    "more": "More"
+  },
+  "about": {
+    "title": "Who will accompany you?",
+    "text": "\n        <p>Jurist, with a law degree from the Autonomous University of Lisbon, currently pursuing a postgraduate degree in Austrian economics from the Mises Institute, and an investor, will guide you through the entire process!</p>\n        <p>With years of experience in crypto asset investments, she has completed various courses such as DeFi, Technical Analysis, Bitcoin Monetary Revolution, Ethereum, among others, from the Ivan on Tech Academy.</p>\n        <p>After completing a course on digital asset tax reporting in the US in 2022, Vict&oacute;ria is dedicated to researching the <b>best countries</b> for crypto investors, to offer alternatives on how to better protect your assets.</p>"
+  },
+  "contact": {
+    "contact_us": "Contact Us",
+    "how_can_i_help_you": "Tell me more about what you're looking for",
+    "first_name": "First Name",
+    "phone": "Phone",
+    "email": "E-mail",
+    "wanted_service": "Service of interest",
+    "send": "Speak to a specialist",
+    "sending": "Sending form",
+    "sended": "Form Sent",
+    "tax_services": "Tax Services",
+    "financial_services": "Financial Services",
+    "legal_services": "Legal Services",
+    "fill_all_inputs_required": "Fill all required fields!"
+  },
+  "finantial": {
+    "title": "Financial Opportunities",
+    "contact_us": "Contact Us",
+    "coverTitle": "DEFI GIVES YOU THE POWER AND CONTROL TO ACHIEVE YOUR GAINS!",
+    "subtitle": "“The rich invest their money and spend what's left;\n                    the poor spend their money and invest what's left.” <br />\n                    <b>Jim Rohn</b>",
+    "text": "<p>Decentralized finance is the future that is already present in thousands of companies, which today operate with new tools provided by the crypto economy. It is possible to use volatility to your advantage and obtain profitability that only a rapidly growing market can offer!</p>\n        <p>With <b>mentorship</b> from our decentralized finance experts, who have years of experience in managing crypto assets, we will help you diversify your investment portfolio and take practical actions with trades, liquidity pools, farming, staking, and many other profitability options in the decentralized world.</p>\n        <p>Although we recommend self-custody, we understand that not everyone has this availability and therefore, in exceptional cases, we offer a portfolio management service, which includes all actions from portfolio creation, asset management, fund tracking, and investment in sectors that align with your profile.</p>"
+  },
+  "legal": {
+    "title": "Asset Protection",
+    "contact_us": "Contact Us",
+    "coverTitle": "PROTECT YOUR ASSETS THE SMART WAY.",
+    "subtitle": "Your freedom will only be achieved when your assets are secure.",
+    "text": "<p>Liberaction has partnerships with law firms in the <b>best countries</b> for crypto investors. Crypto-friendly countries with less bureaucracy where you can operate safely and privately, facilitating or eliminating the need for cryptocurrency tax reporting and <b>shielding</b> your assets against abusive taxes.</p>\n        <p>Together, we will understand the best way to protect your assets, analyzing solutions such as offshore structures that offer <b>tax advantages</b> and greater protection, redirecting your decision to a licensed office in the chosen country.</p>\n        <p>In this country and through a power of attorney for representation, you will have a team of lawyers handling everything, from translations, certifications, bank accounts, registrations, and everything you may need throughout the process, all included in a <b>single service</b>.</p>",
+    "summary": {
+      "1": [
+        "IBC",
+        "International Business Company<br/>"
+      ],
+      "2": [
+        "LLC",
+        "Limited Liability<br />Company"
+      ],
+      "3": [
+        "PIF",
+        " Private Interest<br />Funds"
+      ],
+      "4": [
+        "Smart Contracts",
+        "Self-executing Digital<br/>Contracts"
+      ],
+      "5": [
+        "Trust",
+        "Asset Planning<br/>Structure."
+      ]
+    }
+  },
+  "tax": {
+    "title": "Tax Solutions",
+    "contact_us": "Contact Us",
+    "subtitle": "Pay less taxes with a good tax planning accounting strategy.",
+    "summary": {
+      "1": "Legal Guidance",
+      "2": "Tax Planning",
+      "3": "Single Regularization"
+    },
+    "coverTitle": "Always be one step ahead...",
+    "text": "<p>By hiring a traditional accountant, it's most likely that they will declare all your cryptocurrency earnings as capital gains, leaving you exposed to a huge tax burden that isn't always due.</p>\n        <p>At Liberaction, we have a specialized tax department that declares cryptocurrencies in a way that you&nbsp;<b>legally pay the minimum amount of tax</b>&nbsp;possible, both in income tax and monthly obligations.</p>\n        <p>In other words, we will analyze your transaction history, qualifying operations to&nbsp;<b>declare only what is required</b>&nbsp;and in the permitted tax brackets that are more favorable to you.</p>\n        <p>Our goal is to ensure that you, as a taxpayer, comply with all tax obligations without concerns, while always protecting you from abusive taxes and ensuring your&nbsp;<b>privacy</b>.</p>",
+    "more": "More",
+    "orientation": {
+      "title": "Legal Guidance",
+      "text": "<p>Meeting with a representative from the tax department, <b>with no time limit</b>, with the objective of:</p>\n            <ul>\n            <li>Clarifying all your doubts;</li>\n            <li>Providing suggestions of applicable strategies to you;</li>\n            <li>Guiding you on how to make your declarations;</li>\n            <li>Explaining the taxation of cryptocurrencies in your country.</li>\n            </ul>"
+    },
+    "planing": {
+      "title": "Tax Planning",
+      "text": "<p><b>Just deliver your transaction history every month and you're done!</b></p>\n            <p>You will pay the minimum tax and have zero expenses with fines.</p>\n            <ul>\n            <li>Personalized meeting;</li>\n            <li>Analysis of transaction history;</li>\n            <li>Categorization of all transactions;</li>\n            <li>Inventory control preparation;</li>\n            <li>Exclusive tax planning;</li>\n            <li>Calculation of taxes owed;</li>\n            <li>Monthly preparation of IN1888;</li>\n            <li>Monthly preparation of GCAP;</li>\n            <li>Preparation of IRPF declaration;</li>\n            <li>Unlimited contact with us during the process.</li>\n            </ul>"
+    },
+    "regularization": {
+      "title": "Single Regularization",
+      "text": "<p><strong>Retrospective declaration</strong> for all necessary years up to the present.</p>\n            <ul>\n            <li>Screening meeting;</li>\n            <li>Analysis of transaction histories;</li>\n            <li>Unique preparation of IN1888, for necessary months;</li>\n            <li>Unique preparation of GCAP, for necessary months;</li>\n            <li>Unique preparation of IRPF, for necessary years;</li>\n            </ul>\n            <p>(Taxpayer subject to late fees).</p>\n            </div>"
+    }
+  },
+  "talkWithUs": "Talk With Us"
+}
