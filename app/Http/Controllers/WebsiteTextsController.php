@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\File;
 class WebsiteTextsController extends Controller
 {
     public function all() {
-        $keys = WebsiteTexts::distinct('key')->pluck('key');
+        $keys = WebsiteTexts::where('client_id', Auth::user()->client_id)->distinct('key')->pluck('key');
 
         $results = array();
 
@@ -40,7 +40,7 @@ class WebsiteTextsController extends Controller
     public function get($key)
     {
 
-        $values = WebsiteTexts::where('key', $key)->get();
+        $values = WebsiteTexts::where(['key' => $key, 'client_id' => Auth::user()->client_id])->get();
         $label = $values[0]->label;
         
         $formattedValues = array();
