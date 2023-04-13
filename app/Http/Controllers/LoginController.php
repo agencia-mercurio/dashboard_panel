@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Users;
+use Illuminate\Support\Facades\Crypt;
 
 class LoginController extends Controller
 {
@@ -27,35 +28,55 @@ class LoginController extends Controller
      */
     public function login()
     {
+        if (request('api_key') !== null && request('salt') !== '') {
 
-        $password = hash('sha256',request('password'));
-        $email = request('email');
+            $api_key = request('api_key');
+            $salt = request('salt');
 
-        $credentials = request(['email', 'password']);
-        $user = Users::where([
-            ['email', $email],
-            ['password', $password]
-        ])->first();
+            $user = Users::where([
+                ['api_key', $api_key],
+                ['password', $salt]
+            ])->first();
+
+        } else if (request('email') !== null && request('password') !== ''){
+            $email = request('email');
+            $password = hash('sha256', request('password'));
+
+            $user = Users::where([
+                ['email', $email],
+                ['password', $password]
+            ])->first();
+        } else {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
         if ($user == null) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
+
         $token = auth('services')->login($user);
-        return $this->respondWithToken($token);
+        return $this->respondWithToken($token, isset($api_key));
     }
 
-    protected function respondWithToken($token)
+    protected function respondWithToken($token, $api = false)
     {
         $user = auth('services')->user();
-        return response()->json([
-            'user'=> [
+
+        $result = [
+            'access_token' => $token,
+            'token_type' => 'Bearer',
+            'expires_in' => auth('services')->factory()->getTTL() * 60
+        ];
+
+        if(!$api) {
+            $result['user'] = [
                 'id' => $user->id,
                 'name' => $user->name,
                 'client_id' => $user->client_id,
                 'permissions' => $user->permissions,
-            ],
-            'access_token' => $token,
-            'token_type' => 'Bearer',
-            'expires_in' => auth('services')->factory()->getTTL() * 60
-        ]);
+            ];
+        }
+        
+        return response()->json($result);
     }
 }

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('type')->default('client')->comment("'client' or 'mercurio'");
             $table->string('role')->default('user')->comment("'user' or 'admin'");
             $table->string('password');
+            $table->string('api_key')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

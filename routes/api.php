@@ -15,5 +15,8 @@ use App\Http\Controllers\ApiController;
 |
 */
 
+Route::group(['middleware' => ['auth:services','jwt']], function(){
 
-Route::get('/images/{client_id}/{filename}', [ApiController::class, 'getImage']);
+    Route::get('/website-texts', [ApiController::class, 'texts']);
+    
+});

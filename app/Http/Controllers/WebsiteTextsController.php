@@ -12,31 +12,31 @@ use Illuminate\Support\Facades\File;
 class WebsiteTextsController extends Controller
 {
     public function all() {
-        $keys = WebsiteTexts::where('client_id', Auth::user()->client_id)
-                             ->where('active', 1)
-                             ->distinct('key')
-                             ->pluck('key');
-    
-        $results = array();
-    
-        $values = WebsiteTexts::whereIn('key', $keys)->get();
-    
-        foreach ($keys as $key) {
-            $formattedValues = array();
-            
-            foreach ($values as $value) {
-                if ($value->key == $key) {
-                    $formattedValues[$value->language] = $value->value;
-                }
+        $texts = WebsiteTexts::where([
+            'client_id' => Auth::user()->client_id, 
+            'active' => 1
+        ])->get();
+
+        $labels = [];
+        $keys = [];
+        $values = [];
+
+        foreach($texts as $text) {
+            if(!in_array($text->key, $keys)) { 
+                $keys[] = $text->key;
             }
-            
+            $labels[$text->key] = $text->label;	
+            $values[$text->key][$text->language] = $text->value;
+        }
+
+        foreach($keys as $key) {
             $results[] = array(
-                'label' => $values[0]->label,
+                'label' => $labels[$key],
                 'key' => $key,
-                'value' => $formattedValues
+                'value' => $values[$key]
             );
         }
-    
+
         return $results;
     }
     public function get($key)
