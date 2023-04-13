@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use App\Http\Controllers\ApiController;
 */
 
 Route::group(['middleware' => ['auth:services','jwt']], function(){
-
+    Route::post('/login', [LoginController::class, 'login']);
     Route::get('/website-texts', [ApiController::class, 'texts']);
     
 });
