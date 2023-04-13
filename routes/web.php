@@ -6,6 +6,8 @@ use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\WebsiteImagesController;
 use App\Http\Controllers\WebsiteTextsController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\ApiController;
+
 
 Route::post('/login', [LoginController::class, 'login']);
 
@@ -29,5 +31,6 @@ Route::group(['middleware' => ['auth:services','jwt']], function(){
     Route::post('/website-texts/update', [WebsiteTextsController::class, 'update']);
 
     Route::post('/email/send', [EmailController::class, 'send']);
-    
 });
+
+Route::get('/{api_key}/website-texts/', [ApiController::class, 'texts']);
