@@ -15,9 +15,9 @@ use App\Http\Controllers\LoginController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::post('/login', [LoginController::class, 'login']);
 
 Route::group(['middleware' => ['auth:services','jwt']], function(){
-    Route::post('/login', [LoginController::class, 'login']);
     Route::get('/website-texts', [ApiController::class, 'texts']);
     
 });
