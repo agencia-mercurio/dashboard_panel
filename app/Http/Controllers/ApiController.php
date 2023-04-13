@@ -6,15 +6,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Auth;
 use App\Models\WebsiteTexts;
 
 
 class ApiController extends Controller
 {
-    public function texts() {
+    public function texts($api_key) {
+
+        $user = User::where('api_key', $api_key)->firstOrFail();
+
         $texts = WebsiteTexts::where([
-            'client_id' => Auth::user()->client_id, 
+            'client_id' => $user->client_id, 
             'active' => 1
         ])->get();
 
