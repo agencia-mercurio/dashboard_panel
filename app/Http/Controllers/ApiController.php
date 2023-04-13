@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 use App\Models\WebsiteTexts;
+use App\Models\User;
 
 
 class ApiController extends Controller
