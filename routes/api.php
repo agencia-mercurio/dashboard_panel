@@ -16,4 +16,4 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/api/website-texts/{api_key}', [ApiController::class, 'texts']);
+Route::get('/website-texts/{api_key}', [ApiController::class, 'texts']);
