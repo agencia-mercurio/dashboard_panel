@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 use App\Models\WebsiteTexts;
-use App\Models\User;
+use App\Models\Users;
 
 
 class ApiController extends Controller
 {
     public function texts($api_key) {
 
-        $user = User::where('api_key', $api_key)->firstOrFail();
+        $user = Users::where('api_key', $api_key)->firstOrFail();
 
         $texts = WebsiteTexts::where([
             'client_id' => $user->client_id, 
