@@ -1,0 +1,58 @@
+{
+    "/about/me.png": {
+        "value": "https://liberaction.io/about/me.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"472\", \"height\": \"472\" }, \"mobile\": { \"width\": \"300\", \"height\": \"300\" }}"
+    },
+    "/differential/logos.png": {
+        "value": "https://liberaction.io/differential/logos.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"350\", \"height\": \"230\" }, \"mobile\": { \"width\": \"270\", \"height\": \"180\" }}"
+    },
+    "/finantial/cover.png": {
+        "value": "https://liberaction.io/finantial/cover.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"1905\", \"height\": \"560\" }, \"mobile\": { \"width\": \"396\", \"height\": \"300\" }}"
+    },
+    "/legal/cover.png": {
+        "value": "https://liberaction.io/legal/cover.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"1905\", \"height\": \"560\" }, \"mobile\": { \"width\": \"396\", \"height\": \"300\" }}"
+    },
+    "/services/finantial.png": {
+        "value": "https://liberaction.io/services/finantial.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"288\", \"height\": \"288\" }, \"mobile\": { \"width\": \"140\", \"height\": \"140\" }}"
+    },
+    "/services/legal.png": {
+        "value": "https://liberaction.io/services/legal.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"288\", \"height\": \"288\" }, \"mobile\": { \"width\": \"140\", \"height\": \"140\" }}"
+    },
+    "/services/tax.png": {
+        "value": "https://liberaction.io/services/tax.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"288\", \"height\": \"288\" }, \"mobile\": { \"width\": \"140\", \"height\": \"140\" }}"
+    },
+    "/tax/cover.png": {
+        "value": "https://liberaction.io/tax/cover.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"1905\", \"height\": \"560\" }, \"mobile\": { \"width\": \"396\", \"height\": \"300\" }}"
+    },
+    "/tax/orientation.png": {
+        "value": "https://liberaction.io/tax/orientation.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"380\", \"height\": \"380\" }, \"mobile\": { \"width\": \"280\", \"height\": \"280\" }}"
+    },
+    "/tax/planing.png": {
+        "value": "https://liberaction.io/tax/planing.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"380\", \"height\": \"380\" }, \"mobile\": { \"width\": \"280\", \"height\": \"280\" }}"
+    },
+    "/tax/regularization.png": {
+        "value": "https://liberaction.io/tax/regularization.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"380\", \"height\": \"380\" }, \"mobile\": { \"width\": \"280\", \"height\": \"280\" }}"
+    },
+    "/tax/summary/orientation.png": {
+        "value": "https://liberaction.io/tax/summary/1.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"90\", \"height\": \"100\" }, \"mobile\": { \"width\": \"90\", \"height\": \"100\" }}"
+    },
+    "/tax/summary/planing.png": {
+        "value": "https://liberaction.io/tax/summary/2.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"90\", \"height\": \"100\" }, \"mobile\": { \"width\": \"90\", \"height\": \"100\" }}"
+    },
+    "/tax/summary/regularization.png": {
+        "value": "https://liberaction.io/tax/summary/3.png",
+        "dimensions": "{ \"desktop\": { \"width\": \"90\", \"height\": \"100\" }, \"mobile\": { \"width\": \"90\", \"height\": \"100\" }}"
+    }
+}

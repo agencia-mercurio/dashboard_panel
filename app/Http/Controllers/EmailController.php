@@ -12,7 +12,7 @@ class EmailController extends Controller
 {
     public function send(Request $request)
     {
-        $toEmail = 'leonardo.de.souza.batisat@gmail.com';
+        $toEmail = 'leonardo.de.souza.batista@gmail.com';
 
         // $data = $request->all();
 
@@ -30,5 +30,7 @@ class EmailController extends Controller
             $message->to($toEmail);
             $message->subject('Nova Mensagem - Landing Page');
         });
+
+        return view('emails.notification', ['data' => $data]);
     }
 }

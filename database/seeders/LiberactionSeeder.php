@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\WebsiteTexts;
+use App\Models\WebsiteImages;
+use Illuminate\Support\Facades\Storage;
 
 class LiberactionSeeder extends Seeder
 {
@@ -14,7 +16,7 @@ class LiberactionSeeder extends Seeder
     public function run(): void
     {
         foreach(['pt', 'en'] as $language) {
-            $json = file_get_contents('jsons\liberaction\texts.'. $language .'.json');
+            $json = file_get_contents("database/seeders/texts/liberaction/$language.json");
 
             $object = json_decode($json);
             
@@ -57,5 +59,31 @@ class LiberactionSeeder extends Seeder
                 ]);
             }
         }
+
+        $images = file_get_contents("database/seeders/images/liberaction.json");
+        $imagesObject = json_decode($images);
+        $imagesKeys = (array) $imagesObject;
+
+        foreach ($imagesKeys as $key => $value) {
+
+            $image = $imagesObject->$key;
+
+            $file = file_get_contents($image->value);
+            $filename = basename($image->value);
+            $path = "images/1/$filename";
+            Storage::disk('public')->put($path, $file);
+
+            WebsiteImages::create([
+                'client_id' => 1,
+                'key' => $key,
+                'label' => $key,
+                'desktop' => $path,
+                'mobile' => $path,
+                'dimensions' => $image->dimensions,
+                'alt' => '',
+                'active' => 1
+            ]);
+        }
+
     }
 }

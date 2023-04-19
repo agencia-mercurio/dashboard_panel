@@ -15,5 +15,3 @@ use App\Http\Controllers\LoginController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-Route::get('/website-texts/{api_key}', [ApiController::class, 'texts']);

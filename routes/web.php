@@ -30,7 +30,9 @@ Route::group(['middleware' => ['auth:services','jwt']], function(){
     Route::post('/website-texts/create', [WebsiteTextsController::class, 'create']);
     Route::post('/website-texts/update', [WebsiteTextsController::class, 'update']);
 
-    Route::post('/email/send', [EmailController::class, 'send']);
 });
 
+Route::post('/email/send', [EmailController::class, 'send']);
+
 Route::get('/{api_key}/website-texts/', [ApiController::class, 'texts']);
+Route::get('/images/{client_id}/{filename}', [ApiController::class, 'getImage']);
