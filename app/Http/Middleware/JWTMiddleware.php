@@ -16,7 +16,7 @@ class JWTMiddleware
     public function handle($request, Closure $next)
     {
         try {
-            $user = auth()->userOrFail();
+            $user = Auth::userOrFail();
             return $next($request);
         } catch (\Tymon\JWTAuth\Exceptions\UserNotDefinedException $e) {
             return response()->json(['error' => 'Unauthorized'], 401);
