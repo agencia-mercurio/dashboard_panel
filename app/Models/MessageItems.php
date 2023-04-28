@@ -68,6 +68,7 @@ class MessageItems extends Model
      * @var boolean
      */
     public $timestamps = true;
+    
 
     // Scopes...
 

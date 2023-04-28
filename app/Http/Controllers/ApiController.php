@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\File;
 use App\Models\WebsiteTexts;
 use App\Models\Users;
 
-
 class ApiController extends Controller
 {
     public function texts($api_key) {

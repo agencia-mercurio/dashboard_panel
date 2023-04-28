@@ -6,28 +6,37 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
-
+use App\Models\Users;
+use App\Models\Messages;
+use App\Models\MessageItems;
 
 class EmailController extends Controller
 {
-    public function send(Request $request)
+    public function send(Request $request, $api_key)
     {
-        $toEmail = 'leonardo.de.souza.batista@gmail.com';
+        $data = $request->all();
 
-        // $data = $request->all();
+        $user = Users::where('api_key', $api_key)->firstOrFail();
 
-        $data = [
-            'name' => 'Jane Doe',
-            'email' => 'janedoe@mail.com',
-            'phone' => '+00 0000-0000',
-            'message' => 'Sample message for testing purposes',
-            'now' => date('d/m/Y H:i:s')
-        ];
+        $message = Messages::create([
+            'client_id' => $user->client_id,
+            'email' => $data['email'],
+            'viewed_at' => null
+        ]);
 
+        foreach($data as $key => $value) {
+            $messageItem[] = MessageItems::create([
+                'message_id' => $message->id,
+                'key' => $key,
+                'value' => $value
+            ]);
+        }
 
-        Mail::send('emails.notification', ['data' => $data], function ($message) use ($data, $toEmail) {
+        $data['now'] = date('d/m/Y H:i:s');
+
+        Mail::send('emails.notification', ['data' => $data], function ($message) use ($data) {
             $message->from('notifications@mercurio.marketing', 'Mercurio Marketing');
-            $message->to($toEmail);
+            $message->to($data['email']);
             $message->subject('Nova Mensagem - Landing Page');
         });
 

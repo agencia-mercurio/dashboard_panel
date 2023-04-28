@@ -70,6 +70,11 @@ class Messages extends Model
      */
     public $timestamps = true;
 
+    public function items()
+    {
+        return $this->hasMany('App\Models\MessageItems', 'message_id', 'id');
+    }
+
     // Scopes...
 
     // Functions ...

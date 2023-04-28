@@ -7,9 +7,12 @@ use App\Http\Controllers\WebsiteImagesController;
 use App\Http\Controllers\WebsiteTextsController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\MainController;
 
 
 Route::post('/login', [LoginController::class, 'login']);
+
+Route::get('/', [MainController::class, 'home']);
 
 Route::group(['middleware' => ['auth:services','jwt']], function(){
     Route::get('/messages', [MessagesController::class, 'all']);
@@ -32,7 +35,7 @@ Route::group(['middleware' => ['auth:services','jwt']], function(){
 
 });
 
-Route::post('/email/send', [EmailController::class, 'send']);
+Route::post('/{api_key}/email/send', [EmailController::class, 'send']);
 
 Route::get('/{api_key}/website-texts/', [ApiController::class, 'texts']);
 Route::get('/images/{client_id}/{filename}', [ApiController::class, 'getImage']);

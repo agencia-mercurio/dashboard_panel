@@ -11,12 +11,20 @@
         <h2 style="margin: 0;">Olá!</h2>
         <p style="margin-top: 1rem;">Você recebeu uma nova mensagem de contato:</p>
         <ul style="margin-bottom: 1rem;">
-            <li><strong>Nome:</strong> {{ $data['name'] }}</li>
-            <li><strong>Telefone:</strong> {{ $data['phone'] }}</li>
-            <li><strong>E-mail:</strong> {{ $data['email'] }}</li>
+            @if(isset($data['name'])) 
+                <li><strong>Nome:</strong> {{ $data['name'] }}</li>
+            @endif
+            @if(isset($data['phone'])) 
+                <li><strong>Telefone:</strong> {{ $data['phone'] }}</li>
+            @endif
+            @if(isset($data['email'])) 
+                <li><strong>E-mail:</strong> {{ $data['email'] }}</li>
+            @endif
         </ul>
-        <p style="margin-bottom: 1rem;"><strong>Mensagem:</strong></p>
-        <p style="margin-bottom: 1rem;">{{ $data['message'] }}</p>
+        @if(isset($data['message']))
+            <p style="margin-bottom: 1rem;"><strong>Mensagem:</strong></p>
+            <p style="margin-bottom: 1rem;">{{ $data['message'] }}</p>
+        @endif
     </div>
     <div style="display: grid; margin-top: 1rem; row-gap: 1rem; justify-content: center;">
         <img src="https://siopifacil.com.br/logo.png" alt="Mercúro Marketing" style="margin:auto; max-width: 100%; height: auto;height: 40px;">

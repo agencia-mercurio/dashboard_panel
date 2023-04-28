@@ -11,7 +11,11 @@ class MessagesController extends Controller
 {
     public function all()
     {
-        $messages = Messages::all();
+        $messages = Messages::where([
+            'client_id' => Auth::user()->client_id
+        ])
+        ->with('items')
+        ->get();
 
         return response()->json($messages);
     }
