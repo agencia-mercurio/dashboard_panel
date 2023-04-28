@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Users;
 use App\Models\WebsiteTexts;
+use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
     public function home() {
+        
+        $results = DB::select('select * from users where id = :id', ['id' => 1]);
 
         $user = Users::where('api_key', '803572d6-d988-11ed-afa1-0242ac120002')->firstOrFail();
 
