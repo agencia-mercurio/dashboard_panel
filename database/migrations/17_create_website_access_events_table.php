@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('website_access_events', function (Blueprint $table) {
             $table->id();
+            $table->string('uuid');
             $table->string('key')->comment('event key');
             $table->string('value')->comment('true/false or string description');
             $table->timestamps();

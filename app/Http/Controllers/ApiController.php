@@ -7,11 +7,15 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 use App\Models\WebsiteTexts;
+use App\Models\WebsiteAccess;
+use App\Models\WebsiteAccessEvents;
 use App\Models\Users;
 
 class ApiController extends Controller
 {
     public function texts($api_key) {
+
+        $results = [];
 
         $user = Users::where('api_key', $api_key)->firstOrFail();
 
@@ -26,6 +30,25 @@ class ApiController extends Controller
 
         return $results;
     }
+    public function access($api_key, Request $request) {
+        $user = Users::where('api_key', $api_key)->firstOrFail();
+
+        $access = json_encode($request->all()['access']);
+        $token = $request->all()['token'];
+
+        $access = WebsiteAccess::create([
+            'client_id' => $user->client_id,
+            'uuid' => $token,
+            'access' => $access
+        ]);
+    }
+
+    public function access_event(Request $request) {
+        $wae = WebsiteAccessEvents::create($request->all());
+
+        return $wae;
+    }
+
     public function getImage($client_id, $filename)
     {
         $path = Storage::disk('public')->path("images/$client_id/$filename");

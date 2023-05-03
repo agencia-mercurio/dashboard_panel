@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('website_sections', function (Blueprint $table) {
             $table->id();
+            $table->integer('client_id');
             $table->string('section');
             $table->string('key');
             $table->integer('active');

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
+ * @property string $client_id
  * @property string $uuid
  * @property string $access
  * @property int    $created_at
@@ -32,7 +33,7 @@ class WebsiteAccess extends Model
      * @var array
      */
     protected $fillable = [
-        'uuid', 'access', 'created_at', 'updated_at'
+        'client_id', 'uuid', 'access', 'created_at', 'updated_at'
     ];
 
     /**
@@ -50,7 +51,7 @@ class WebsiteAccess extends Model
      * @var array
      */
     protected $casts = [
-        'uuid' => 'string', 'access' => 'string', 'created_at' => 'timestamp', 'updated_at' => 'timestamp'
+        'client_id' => 'int', 'uuid' => 'string', 'access' => 'string', 'created_at' => 'timestamp', 'updated_at' => 'timestamp'
     ];
 
     /**
@@ -68,6 +69,12 @@ class WebsiteAccess extends Model
      * @var boolean
      */
     public $timestamps = true;
+
+
+    public function events()
+    {
+        return $this->hasMany('App\Models\WebsiteAccessEvents', 'uuid', 'uuid');
+    }
 
     // Scopes...
 

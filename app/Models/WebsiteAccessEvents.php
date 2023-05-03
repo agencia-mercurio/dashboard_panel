@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
+ * @property string $uuid
  * @property string $key
  * @property string $value
  * @property int    $created_at
@@ -31,7 +32,7 @@ class WebsiteAccessEvents extends Model
      * @var array
      */
     protected $fillable = [
-        'key', 'value', 'created_at'
+        'uuid', 'key', 'value', 'created_at'
     ];
 
     /**
@@ -49,7 +50,7 @@ class WebsiteAccessEvents extends Model
      * @var array
      */
     protected $casts = [
-        'key' => 'string', 'value' => 'string', 'created_at' => 'timestamp'
+        'uuid' => 'string', 'key' => 'string', 'value' => 'string', 'created_at' => 'timestamp'
     ];
 
     /**

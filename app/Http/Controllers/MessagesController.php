@@ -15,6 +15,7 @@ class MessagesController extends Controller
             'client_id' => Auth::user()->client_id
         ])
         ->with('items')
+        ->orderBy('created_at', 'desc')
         ->get();
 
         return response()->json($messages);

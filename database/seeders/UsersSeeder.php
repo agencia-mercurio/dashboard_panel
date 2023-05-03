@@ -16,8 +16,8 @@ class UsersSeeder extends Seeder
         Users::create([
             'permissions_id' => '1',
             'client_id' => '1',
-            'name' => 'Liberaction',
-            'email' => 'webmaster@liberaction.io',
+            'name' => 'Administrador',
+            'email' => 'admin@admin.com',
             'type' => 'client',
             'role' => 'user',
             'password' => '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918',

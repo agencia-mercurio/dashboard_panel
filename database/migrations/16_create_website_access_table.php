@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('website_access', function (Blueprint $table) {
             $table->id();
+            $table->integer('client_id');
             $table->string('uuid');
             $table->longText('access')->comment('JSON string of access data');
             $table->timestamps();

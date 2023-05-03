@@ -60,6 +60,7 @@ class LiberactionSeeder extends Seeder
             }
         }
 
+
         $images = file_get_contents("database/seeders/images/liberaction.json");
         $imagesObject = json_decode($images);
         $imagesKeys = (array) $imagesObject;

@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('website_languages', function (Blueprint $table) {
             $table->id();
+            $table->integer('client_id');
+
             $table->string('name');
             $table->integer('active');
             $table->timestamps();

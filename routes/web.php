@@ -8,6 +8,7 @@ use App\Http\Controllers\WebsiteTextsController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\WebsiteAccessController;
 
 
 Route::post('/login', [LoginController::class, 'login']);
@@ -33,9 +34,14 @@ Route::group(['middleware' => ['auth:services','jwt']], function(){
     Route::post('/website-texts/create', [WebsiteTextsController::class, 'create']);
     Route::post('/website-texts/update', [WebsiteTextsController::class, 'update']);
 
+    Route::get('/website-access', [WebsiteAccessController::class, 'all']);
 });
 
 Route::post('/{api_key}/email/send', [EmailController::class, 'send']);
 
 Route::get('/{api_key}/website-texts/', [ApiController::class, 'texts']);
+Route::post('/{api_key}/website-access', [ApiController::class, 'access']);
+Route::post('/website-access-event', [ApiController::class, 'access_event']);
+
+
 Route::get('/images/{client_id}/{filename}', [ApiController::class, 'getImage']);
