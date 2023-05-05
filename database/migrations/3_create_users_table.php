@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('client_id');
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('emailTo')->nullable();
             $table->string('type')->default('client')->comment("'client' or 'mercurio'");
             $table->string('role')->default('user')->comment("'user' or 'admin'");
             $table->string('password');

@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth:services','jwt']], function(){
 
 Route::post('/{api_key}/email/send', [EmailController::class, 'send']);
 
+Route::get('/{api_key}/website-images/', [ApiController::class, 'images']);
 Route::get('/{api_key}/website-texts/', [ApiController::class, 'texts']);
 Route::post('/{api_key}/website-access', [ApiController::class, 'access']);
 Route::post('/website-access-event', [ApiController::class, 'access_event']);

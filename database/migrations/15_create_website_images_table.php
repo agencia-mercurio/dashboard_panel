@@ -19,7 +19,7 @@ return new class extends Migration
             $table->longText('desktop');
             $table->string('mobile');
             $table->string('dimensions');
-            $table->string('alt');
+            $table->string('alt')->nullable();
             $table->integer('active');
             $table->timestamps();
         });

@@ -70,7 +70,12 @@ class LiberactionSeeder extends Seeder
             $image = $imagesObject->$key;
 
             $file = file_get_contents($image->value);
-            $filename = basename($image->value);
+            $filename = $image->value;
+
+            $filename = str_replace("https://liberaction.io/", "", $filename);
+
+            $filename = str_replace("/", "-", $filename);
+
             $path = "images/1/$filename";
             Storage::disk('public')->put($path, $file);
 

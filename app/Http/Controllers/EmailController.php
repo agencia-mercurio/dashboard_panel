@@ -34,11 +34,11 @@ class EmailController extends Controller
 
         $data['now'] = date('d/m/Y H:i:s');
 
-        // Mail::send('emails.notification', ['data' => $data], function ($message) use ($data) {
-        //     $message->from('notifications@mercurio.marketing', 'Mercurio Marketing');
-        //     $message->to($data['email']);
-        //     $message->subject('Nova Mensagem - Landing Page');
-        // });
+        Mail::send('emails.notification', ['data' => $data], function ($message) use ($data, $user) {
+            $message->from('notifications@mercurio.marketing', 'Mercurio Marketing');
+            $message->to($user->emailTo);
+            $message->subject('Nova Mensagem - Landing Page');
+        });
 
         return $message;
     }

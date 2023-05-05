@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
 use App\Models\WebsiteTexts;
+use App\Models\WebsiteImages;
 use App\Models\WebsiteAccess;
 use App\Models\WebsiteAccessEvents;
 use App\Models\Users;
@@ -26,6 +27,29 @@ class ApiController extends Controller
 
         foreach($texts as $text) {
             $results[$text->key][$text->language] = $text->value;
+        }
+
+        return $results;
+    }
+    public function images($api_key) {
+
+        $results = [];
+
+        $user = Users::where('api_key', $api_key)->firstOrFail();
+
+        $images = WebsiteImages::where([
+            'client_id' => $user->client_id, 
+            'active' => 1
+        ])->get();
+
+        $baseUrl = url('/') . '/';
+
+        foreach($images as $image) {
+            $results[$image->key] = [
+                'desktop'   => $baseUrl . $image->desktop,
+                'mobile'    => $baseUrl . $image->mobile,
+                'alt'       => $image->alt
+            ];
         }
 
         return $results;
