@@ -45,7 +45,7 @@ class MessagesController extends Controller
             return response()->json(['error' => $error], 404);
         }
 
-        $message->viewed = 2;
+        $message->viewed_at = now();
         $message->save();
 
         $duration = microtime(true) - $startTime;

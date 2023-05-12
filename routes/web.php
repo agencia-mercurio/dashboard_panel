@@ -18,7 +18,7 @@ Route::get('/', [MainController::class, 'home']);
 Route::group(['middleware' => ['auth:services','jwt']], function(){
     Route::get('/messages', [MessagesController::class, 'all']);
     Route::get('/messages/{id}', [MessagesController::class, 'get']);
-    Route::post('/messages/{id}/viewed', [MessagesController::class, 'view']);
+    Route::get('/messages/{id}/viewed', [MessagesController::class, 'view']);
     Route::post('/messages/viewed', [MessagesController::class, 'viewMultiple']);
     Route::post('/messages/create', [MessagesController::class, 'create']);
     Route::put('/messages/update', [MessagesController::class, 'update']);

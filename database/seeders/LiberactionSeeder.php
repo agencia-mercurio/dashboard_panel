@@ -60,7 +60,6 @@ class LiberactionSeeder extends Seeder
             }
         }
 
-
         $images = file_get_contents("database/seeders/images/liberaction.json");
         $imagesObject = json_decode($images);
         $imagesKeys = (array) $imagesObject;
@@ -72,7 +71,7 @@ class LiberactionSeeder extends Seeder
             $file = file_get_contents($image->value);
             $filename = $image->value;
 
-            $filename = str_replace("https://liberaction.io/", "", $filename);
+            $filename = str_replace("http://localhost:54102/", "", $filename);
 
             $filename = str_replace("/", "-", $filename);
 

@@ -35,7 +35,7 @@ class EmailController extends Controller
         $data['now'] = date('d/m/Y H:i:s');
 
         Mail::send('emails.notification', ['data' => $data], function ($message) use ($data, $user) {
-            $message->from('notifications@mercurio.marketing', 'Mercurio Marketing');
+            $message->from('contato@mercurio.marketing', 'Mercurio Marketing');
             $message->to($user->emailTo);
             $message->subject('Nova Mensagem - Landing Page');
         });
