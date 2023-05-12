@@ -21,8 +21,7 @@ class ApiController extends Controller
         $user = Users::where('api_key', $api_key)->firstOrFail();
 
         $texts = WebsiteTexts::where([
-            'client_id' => $user->client_id, 
-            'active' => 1
+            'client_id' => $user->client_id
         ])->get();
 
         foreach($texts as $text) {
