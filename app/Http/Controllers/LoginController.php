@@ -74,6 +74,7 @@ class LoginController extends Controller
                 'name' => $user->name,
                 'client_id' => $user->client_id,
                 'permissions' => $user->permissions,
+                'configs' => $user->configs,
             ];
         }
         

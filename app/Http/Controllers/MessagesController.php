@@ -15,6 +15,8 @@ class MessagesController extends Controller
             'client_id' => Auth::user()->client_id
         ])
         ->with('items')
+        ->with('comments')
+        ->orderBy('viewed_at', 'asc')
         ->orderBy('created_at', 'desc')
         ->get();
 

@@ -97,4 +97,9 @@ class Users extends Authenticatable implements JWTSubject
     {
         return $this->belongsTo('App\Models\Permissions');
     }
+    
+    public function configs()
+    {
+        return $this->hasOne('App\Models\UserConfigs', 'user_id', 'id');
+    }
 }

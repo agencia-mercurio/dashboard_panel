@@ -9,6 +9,7 @@ use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\WebsiteAccessController;
+use App\Http\Controllers\MessageCommentController;
 
 
 Route::post('/login', [LoginController::class, 'login']);
@@ -33,6 +34,11 @@ Route::group(['middleware' => ['auth:services','jwt']], function(){
     Route::get('/website-texts/{key}', [WebsiteTextsController::class, 'get']);
     Route::post('/website-texts/create', [WebsiteTextsController::class, 'create']);
     Route::post('/website-texts/update', [WebsiteTextsController::class, 'update']);
+
+
+    Route::post('/messages/comment/create', [MessageCommentController::class, 'create']);
+    Route::post('/messages/comment/{id}/update', [MessageCommentController::class, 'update']);
+    Route::get('/messages/comment/{id}/delete', [MessageCommentController::class, 'delete']);
 
     Route::get('/website-access', [WebsiteAccessController::class, 'all']);
 });

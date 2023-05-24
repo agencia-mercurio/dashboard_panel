@@ -5,20 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @property int    $client_id
- * @property int    $viewed_at
+ * @property int $message_id
+ * @property int $user_id
+ * @property string $comment
  * @property int    $created_at
  * @property int    $updated_at
- * @property string $email
  */
-class Messages extends Model
+class MessageComment extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'messages';
+    protected $table = 'message_comment';
 
     /**
      * The primary key for the model.
@@ -32,9 +32,7 @@ class Messages extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'client_id', 'email', 'viewed_at', 'created_at', 'updated_at'
-    ];
+    protected $fillable = [ 'message_id', 'user_id', 'comment', 'created_at', 'updated_at' ];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -50,9 +48,10 @@ class Messages extends Model
      *
      * @var array
      */
-    protected $casts = [
-        'client_id' => 'int', 'email' => 'string', 'viewed_at' => 'timestamp', 'created_at' => 'timestamp', 'updated_at' => 'timestamp'
-    ];
+
+      
+
+    protected $casts = [ 'message_id' => 'int', 'user_id' => 'int', 'comment' => 'string', 'created_at' => 'timestamp', 'updated_at' => 'timestamp' ];
 
     /**
      * The attributes that should be mutated to dates.
@@ -60,7 +59,7 @@ class Messages extends Model
      * @var array
      */
     protected $dates = [
-        'viewed_at', 'created_at', 'updated_at'
+        'created_at', 'updated_at'
     ];
 
     /**
@@ -70,14 +69,14 @@ class Messages extends Model
      */
     public $timestamps = true;
 
-    public function items()
-    {
-        return $this->hasMany('App\Models\MessageItems', 'message_id', 'id');
-    }
 
-    public function comments()
+    public function events()
     {
-        return $this->hasMany('App\Models\MessageComment', 'message_id', 'id')->with('user');
+        return $this->hasMany('App\Models\MessageCommentEvents', 'uuid', 'uuid');
+    }
+    public function user()
+    {
+        return $this->belongsTo('App\Models\Users', 'user_id')->with('configs');
     }
 
     // Scopes...

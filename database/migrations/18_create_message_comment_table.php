@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_configs', function (Blueprint $table) {
+        Schema::create('message_comment', function (Blueprint $table) {
             $table->id();
+            $table->integer('message_id');
             $table->integer('user_id');
-            $table->integer('dark_mode');
-            $table->string('rgb');
+            $table->longText('comment');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_configs');
+        Schema::dropIfExists('message_comment');
     }
 };

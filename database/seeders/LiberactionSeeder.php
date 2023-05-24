@@ -60,35 +60,35 @@ class LiberactionSeeder extends Seeder
             }
         }
 
-        $images = file_get_contents("database/seeders/images/liberaction.json");
-        $imagesObject = json_decode($images);
-        $imagesKeys = (array) $imagesObject;
+        // $images = file_get_contents("database/seeders/images/liberaction.json");
+        // $imagesObject = json_decode($images);
+        // $imagesKeys = (array) $imagesObject;
 
-        foreach ($imagesKeys as $key => $value) {
+        // foreach ($imagesKeys as $key => $value) {
 
-            $image = $imagesObject->$key;
+        //     $image = $imagesObject->$key;
 
-            $file = file_get_contents($image->value);
-            $filename = $image->value;
+        //     $file = file_get_contents($image->value);
+        //     $filename = $image->value;
 
-            $filename = str_replace("http://localhost:54102/", "", $filename);
+        //     $filename = str_replace("http://localhost:54102/", "", $filename);
 
-            $filename = str_replace("/", "-", $filename);
+        //     $filename = str_replace("/", "-", $filename);
 
-            $path = "images/1/$filename";
-            Storage::disk('public')->put($path, $file);
+        //     $path = "images/1/$filename";
+        //     Storage::disk('public')->put($path, $file);
 
-            WebsiteImages::create([
-                'client_id' => 1,
-                'key' => $key,
-                'label' => $key,
-                'desktop' => $path,
-                'mobile' => $path,
-                'dimensions' => $image->dimensions,
-                'alt' => '',
-                'active' => 1
-            ]);
-        }
+        //     WebsiteImages::create([
+        //         'client_id' => 1,
+        //         'key' => $key,
+        //         'label' => $key,
+        //         'desktop' => $path,
+        //         'mobile' => $path,
+        //         'dimensions' => $image->dimensions,
+        //         'alt' => '',
+        //         'active' => 1
+        //     ]);
+        // }
 
     }
 }
