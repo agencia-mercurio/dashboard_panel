@@ -13,6 +13,7 @@ class WebsiteAccessController extends Controller
         $messages = WebsiteAccess::where([
             'client_id' => Auth::user()->client_id
         ])
+        ->orderBy('created_at', 'desc')
         ->with('events')
         ->get();
 
