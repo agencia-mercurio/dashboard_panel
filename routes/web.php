@@ -10,6 +10,9 @@ use App\Http\Controllers\ApiController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\WebsiteAccessController;
 use App\Http\Controllers\MessageCommentController;
+use App\Http\Controllers\SocialMediasController;
+use App\Http\Controllers\TagsController;
+use App\Http\Controllers\TransmissionsController;
 
 
 Route::post('/login', [LoginController::class, 'login']);
@@ -41,6 +44,17 @@ Route::group(['middleware' => ['auth:services','jwt']], function(){
     Route::get('/messages/comment/{id}/delete', [MessageCommentController::class, 'delete']);
 
     Route::get('/website-access', [WebsiteAccessController::class, 'all']);
+
+    Route::get('/social-medias', [SocialMediasController::class, 'all']);
+    Route::post('/social-medias/save', [SocialMediasController::class, 'save']);
+
+    Route::get('/tags', [TagsController::class, 'all']);
+    Route::post('/tags/create', [TagsController::class, 'create']);
+    Route::post('/tags/link', [TagsController::class, 'link']);
+
+    Route::get('/transmissions', [TransmissionsController::class, 'all']);
+    Route::get('/transmissions/{id}', [TransmissionsController::class, 'get']);
+    Route::post('/transmissions/{id}/update', [TransmissionsController::class, 'update']);
 });
 
 Route::post('/{api_key}/email/send', [EmailController::class, 'send']);
@@ -49,6 +63,7 @@ Route::get('/{api_key}/website-images/', [ApiController::class, 'images']);
 Route::get('/{api_key}/website-texts/', [ApiController::class, 'texts']);
 Route::post('/{api_key}/website-access', [ApiController::class, 'access']);
 Route::post('/website-access-event', [ApiController::class, 'access_event']);
+Route::post('/{api_key}/op-transmission', [ApiController::class, 'opTransmission']);
 
 
 Route::get('/images/{client_id}/{filename}', [ApiController::class, 'getImage']);

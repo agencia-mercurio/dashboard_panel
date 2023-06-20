@@ -5,20 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @property int    $client_id
- * @property int    $viewed_at
+ * @property integer $client_id
+ * @property string $entity
+ * @property integer $entity_id
+ * @property integer $tag_id
  * @property int    $created_at
  * @property int    $updated_at
- * @property string $email
  */
-class Messages extends Model
+class TagsItems extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'messages';
+    protected $table = 'tags_items';
 
     /**
      * The primary key for the model.
@@ -32,9 +33,7 @@ class Messages extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'client_id', 'email', 'viewed_at', 'created_at', 'updated_at'
-    ];
+    protected $fillable = ['client_id', 'entity', 'entity_id', 'tag_id', 'created_at', 'updated_at'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -51,7 +50,7 @@ class Messages extends Model
      * @var array
      */
     protected $casts = [
-        'client_id' => 'int', 'email' => 'string', 'viewed_at' => 'timestamp', 'created_at' => 'timestamp', 'updated_at' => 'timestamp'
+        'client_id' => 'integer', 'entity' => 'string', 'entity_id' => 'integer', 'tag_id' => 'integer', 'created_at' => 'timestamp', 'updated_at' => 'timestamp'
     ];
 
     /**
@@ -60,7 +59,7 @@ class Messages extends Model
      * @var array
      */
     protected $dates = [
-        'viewed_at', 'created_at', 'updated_at'
+        'created_at', 'updated_at'
     ];
 
     /**
@@ -70,18 +69,7 @@ class Messages extends Model
      */
     public $timestamps = true;
 
-    public function items()
-    {
-        return $this->hasMany('App\Models\MessageItems', 'message_id', 'id');
+    public function tag() {
+        return $this->hasOne('App\Models\Tags', 'id', 'tag_id');
     }
-
-    public function comments()
-    {
-        return $this->hasMany('App\Models\MessageComment', 'message_id', 'id')->with('user');
-    }
-    // Scopes...
-
-    // Functions ...
-
-    // Relations ...
 }

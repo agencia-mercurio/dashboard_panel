@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(LiberactionSeeder::class);
         // $this->call(UsersSeeder::class);
-        $this->call(MessagesSeeder::class);
-        $this->call(MessageCommentSeeder::class);
+        // $this->call(MessagesSeeder::class);
+        // $this->call(MessageCommentSeeder::class);
     }
 }

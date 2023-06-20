@@ -5,20 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @property int    $client_id
- * @property int    $viewed_at
+ * @property string $client_id
+ * @property string $label
+ * @property string $icon
+ * @property string $color
+ * @property integer $active
  * @property int    $created_at
  * @property int    $updated_at
- * @property string $email
  */
-class Messages extends Model
+class Tags extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'messages';
+    protected $table = 'tags';
 
     /**
      * The primary key for the model.
@@ -32,9 +34,7 @@ class Messages extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'client_id', 'email', 'viewed_at', 'created_at', 'updated_at'
-    ];
+    protected $fillable = ['client_id', 'label', 'icon', 'color', 'active', 'created_at', 'updated_at'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -51,7 +51,7 @@ class Messages extends Model
      * @var array
      */
     protected $casts = [
-        'client_id' => 'int', 'email' => 'string', 'viewed_at' => 'timestamp', 'created_at' => 'timestamp', 'updated_at' => 'timestamp'
+        'client_id' => 'integer', 'label' => 'string', 'icon' => 'string', 'color' => 'string', 'active' => 'integer', 'created_at' => 'timestamp', 'updated_at' => 'timestamp'
     ];
 
     /**
@@ -60,7 +60,7 @@ class Messages extends Model
      * @var array
      */
     protected $dates = [
-        'viewed_at', 'created_at', 'updated_at'
+        'created_at', 'updated_at'
     ];
 
     /**
@@ -69,19 +69,4 @@ class Messages extends Model
      * @var boolean
      */
     public $timestamps = true;
-
-    public function items()
-    {
-        return $this->hasMany('App\Models\MessageItems', 'message_id', 'id');
-    }
-
-    public function comments()
-    {
-        return $this->hasMany('App\Models\MessageComment', 'message_id', 'id')->with('user');
-    }
-    // Scopes...
-
-    // Functions ...
-
-    // Relations ...
 }

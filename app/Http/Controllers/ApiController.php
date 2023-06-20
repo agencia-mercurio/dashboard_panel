@@ -11,6 +11,7 @@ use App\Models\WebsiteImages;
 use App\Models\WebsiteAccess;
 use App\Models\WebsiteAccessEvents;
 use App\Models\Users;
+use App\Models\OPTransmissions;
 
 class ApiController extends Controller
 {
@@ -83,5 +84,83 @@ class ApiController extends Controller
         }
         
         return (new Response($file, 200))->header('Content-Type', $type);
+    }
+    public function opTransmission(Request $request) {
+        if (!$request->all()['login'] || !$request->all()['password']) {
+            return response()->json([
+                'status' => false,
+                'error' => 'Missing parameters!'
+            ]);
+        }
+        $login = $request->all()['login'];
+        $password = $request->all()['password'];
+
+        $transmission = OPTransmissions::where([
+            'login' => $login,
+            'password' => $password
+        ])->first();
+
+        if (!$transmission) {
+            return response()->json([
+                'status' => false,
+                'error' => 'No transmission found!'
+            ]);
+        }
+
+        $id = $transmission->external_id;
+        $room_password = $transmission->room_password;
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://api.adiau.cloud/transmissions/stream',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => http_build_query(array(
+                'transmission' => $id,
+                'password' => $room_password,
+            )),
+            CURLOPT_HTTPHEADER => array(
+                'token: 559a57d20d1a34b485435b93069b7495',
+                'client: 360',
+                'Content-Type: application/x-www-form-urlencoded',
+            ),
+        ));
+
+        curl_close($curl);
+        
+        if(curl_errno($curl)){
+            $response = 'Request Error:' . curl_error($curl);
+        }
+        else{
+            $response = curl_exec($curl);
+        }
+
+        $response = json_decode($response, true);
+
+
+        if (!isset($response['data'])) {
+            $response = [];
+        } else {
+            $response = $response['data'];
+        }
+
+        if(sizeof($response) == 0) {
+            return response()->json([
+                'status' => false,
+                'error' => 'No cameras found!'
+            ]);
+        }
+
+
+        return response()->json([
+            'status' => true,
+            'cameras' => $response
+        ]);
     }
 }

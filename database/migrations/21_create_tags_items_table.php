@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('social_medias', function (Blueprint $table) {
+        Schema::create('tags_items', function (Blueprint $table) {
             $table->id();
+            $table->integer('client_id');
             $table->string('entity');
-            $table->integer('id_entity');
-            $table->string('name');
-            $table->string('username');
-            $table->string('url');
-            $table->integer('active');
+            $table->integer('entity_id');
+            $table->integer('tag_id');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('social_medias');
+        Schema::dropIfExists('tags_items');
     }
 };
