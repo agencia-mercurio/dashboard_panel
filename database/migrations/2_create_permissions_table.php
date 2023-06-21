@@ -26,6 +26,12 @@ return new class extends Migration
             $table->integer('reply_wm')->comment('Reply website messages');
 
             $table->integer('folders_scheme')->comment('Folder scheme');
+            
+            // Pages Access
+            $table->integer('page_texts')->comment('Access texts');
+            $table->integer('page_messages')->comment('Access messages');
+            $table->integer('page_op_transmissions')->comment('Access op_transmissions');
+            $table->integer('page_settings')->comment('Access settings');
 
             $table->timestamps();
         });

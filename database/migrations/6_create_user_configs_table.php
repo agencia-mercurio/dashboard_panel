@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('dark_mode');
+            $table->string('initial_route');
             $table->string('rgb');
             $table->timestamps();
         });
