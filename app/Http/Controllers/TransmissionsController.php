@@ -40,14 +40,13 @@ class TransmissionsController extends Controller
 
             $response = json_decode($response, true);
 
-        if (!$response['status']) {
-            $response = [];
-        } else {
-            $response = $response['data'];
-            $response = $this->storeTransmissions($response);
-            return response()->json($response);
-
-        }
+            if (!$response['status'] && !$response['message'] == 'Empty list') {
+                $response = [];
+            } else {
+                $response = $response['data'] ?? [];
+                $response = $this->storeTransmissions($response);
+                return response()->json($response);
+            }    
 
         return response()->json($response);
     }
@@ -67,9 +66,8 @@ class TransmissionsController extends Controller
             $transmissionsIds[] = $transmission['external_id'];
         }
 
-
         if (sizeof($optransmissionsIds) > 0) {
-            $idsToDelete = array_diff($transmissionsIds, $optransmissionsIds);
+            $idsToDelete = array_diff($optransmissionsIds, $transmissionsIds);
             OPTransmissions::whereIn('external_id', $idsToDelete)->delete();
         }
 
